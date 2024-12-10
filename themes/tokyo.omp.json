@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "$schema": "https://raw.githubusercontent.com/nikhilhestabit/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
       "alignment": "left",
@@ -67,10 +67,17 @@
           "type": "kubectl"
         },
         {
-          "foreground": "#ffa5d8",
-          "style": "plain",
-          "template": "[\uf0e7]",
-          "type": "root"
+          "foreground": "#906cff",
+          "background": "#100e23",
+          "style": "powerline",
+          "properties": {
+            "fetch_virtual_env": true,
+            "fetch_version": true,
+            "display_mode": "environment",
+            "cache_duration": "5m"
+          },
+          "template": "  {{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }} ",
+          "type": "python"
         },
         {
           "foreground": "#ffa5d8",
